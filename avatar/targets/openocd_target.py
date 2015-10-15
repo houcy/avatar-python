@@ -7,10 +7,8 @@ log = logging.getLogger(__name__)
 
 #This names are OpenOCD specific
 ARM_REGISTERS = ["r0", "r1","r2","r3","r4","r5","r6","r7","r8","r9","r10","r11",
-                  "r12","sp_usr","lr_usr","pc","cpsr","r8_fiq","r9_fiq",
-                  "r10_fiq","r11_fiq","r12_fiq","sp_fiq","lr_fiq","spsr_fiq",
-                  "sp_svc","lr_svc","spsr_svc","sp_abt","lr_abt","spsr_abt",
-                  "sp_irq","lr_irq","spsr_irq","sp_und","lr_und","spsr_und"]
+                  "r12","sp","lr","pc","xPSR","msp","psp",
+                  "primask","basepri","faultmask","control"]
 
 # Decorator for methods requiring target Stop&Start
 def paused(fn):

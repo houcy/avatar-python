@@ -67,11 +67,11 @@ class System():
         
         #Setup logging to console
 #         logging.basicConfig(level = logging.DEBUG, format = CONSOLE_LOG_FORMAT)
-#        console_log_handler = logging.StreamHandler()
-#        console_log_handler.setLevel(logging.DEBUG)
-#        console_log_handler.setFormatter(logging.Formatter(CONSOLE_LOG_FORMAT))
-#        logging.getLogger("").addHandler(console_log_handler)
- #       logging.getLogger("").setLevel(logging.DEBUG)
+        console_log_handler = logging.StreamHandler()
+        console_log_handler.setLevel(logging.DEBUG)
+        console_log_handler.setFormatter(logging.Formatter(CONSOLE_LOG_FORMAT))
+        logging.getLogger("").addHandler(console_log_handler)
+        logging.getLogger("").setLevel(logging.DEBUG)
         
         #Check if output directory exists, and create it if not
         output_directory = configuration["output_directory"]
@@ -91,7 +91,7 @@ class System():
         file_log_handler.setLevel(logging.DEBUG)
         file_log_handler.setFormatter(logging.Formatter(FILE_LOG_FORMAT))
         logging.getLogger("").addHandler(file_log_handler)
- #       console_log_handler.setLevel(logging.INFO)
+        console_log_handler.setLevel(logging.INFO)
         
         self._event_thread = Thread(target = self._process_events)
         self._event_thread.start()
@@ -128,7 +128,7 @@ class System():
             self._terminating.set()
             self._emulator.stop()
             self._target.stop()
-            self._call_proxy.stop_monitors()
+            #self._call_proxy.stop_monitors()
         
     def set_emulator(self, emulator):
         """This method is supposed to be called by the emulator init function

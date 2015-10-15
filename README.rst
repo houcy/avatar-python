@@ -4,9 +4,7 @@ Avatar: dynamic firmware analysis
 This repository contains the Python library which constitutes the core
 of the `Avatar framework <http://www.s3.eurecom.fr/tools/avatar/>`_.
 
-Examples
---------
-
-Some devices have been analysed in our NDSS'14 paper, code examples are
-available in the `avatar-samples
-repository <https://github.com/eurecom-s3/avatar-samples>`_.
+This repository is a fork of the official repo. Bug fixes and extensions have
+been implemented for an Honours Project at the University of Canterbury. 
+The report behind this project will be availible from `here
+<http://cosc.canterbury.ac.nz/research/reports/HonsReps/>`_.
